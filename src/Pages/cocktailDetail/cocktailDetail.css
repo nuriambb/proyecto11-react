@@ -51,6 +51,9 @@
 .div-ingredients:hover {
   transform: scale(1.01);
 }
+.div-ingredients ul {
+  padding-left: 15px;
+}
 h5 {
   font-family: var(--font1);
   color: var(--beige2);
