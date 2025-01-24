@@ -28,7 +28,9 @@ const CocktailDetail = () => {
           const measure = drink[`strMeasure${i}`]
 
           if (ingredient) {
-            ingredients.push(measure ? `${ingredient}${measure}` : ingredient)
+            ingredients.push(
+              measure ? `${ingredient} - ${measure}` : ingredient
+            )
           }
         }
 
