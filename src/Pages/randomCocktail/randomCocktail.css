@@ -1,0 +1,105 @@
+.horizontal {
+  flex-direction: row;
+  width: 80%;
+  justify-content: space-around;
+  border-radius: 30px;
+  align-items: center;
+  padding: 10px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 1.2s ease-out forwards;
+  animation-delay: 0.2s;
+}
+.horizontal > img {
+  width: 23em;
+}
+.h4Random {
+  width: 20%;
+  font-size: 3.2rem;
+}
+.buttonRandom {
+  cursor: pointer;
+  padding: 12px 20px;
+  font-size: 2rem;
+  border-radius: 50px;
+  border: 3px solid var(--brown1);
+  background-color: var(--beige);
+  color: var(--brown1);
+  font-family: var(--font2);
+  font-weight: 500;
+  outline: none;
+  transition: all 0.2s ease;
+  width: 20%;
+}
+.buttonRandom:hover {
+  border-color: var(--brown1);
+  background-color: var(--beige);
+  box-shadow: 0 0 5px rgba(139, 94, 60, 0.7);
+  transform: scale(1.01);
+}
+
+.horizontal a {
+  text-align: center;
+  width: 20%;
+  text-decoration: none;
+}
+.randomDetail {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+.discover:hover {
+  animation: neon-flicker 1s infinite alternate;
+}
+@media (max-width: 950px) {
+  .horizontal {
+    flex-direction: column;
+    height: auto;
+  }
+  .horizontal img {
+    width: 25em;
+  }
+  .h4Random {
+    width: 100%;
+  }
+  .randomDetail {
+    flex-direction: row;
+    padding-top: 5px;
+  }
+}
+@media (max-width: 750px) {
+  .buttonRandom {
+    font-size: 1.5em;
+    width: 25%;
+  }
+  .h4Random {
+    font-size: 3em;
+  }
+}
+@media (max-width: 590px) {
+  .horizontal {
+    width: 15rem;
+    height: 24rem;
+    padding: 20px 10px 10px 10px;
+  }
+  .horizontal img {
+    width: 100%;
+  }
+  .h4Random {
+    font-size: 2rem;
+  }
+  .randomDetail {
+    font-size: 1.5rem;
+  }
+  .buttonRandom {
+    width: 40%;
+  }
+}
+@media (max-width: 320px) {
+  .buttonRandom {
+    width: 60%;
+  }
+}

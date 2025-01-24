@@ -1,0 +1,3 @@
+.find:hover {
+  animation: neon-flicker 1s infinite alternate;
+}

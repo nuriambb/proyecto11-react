@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+@font-face {
+  font-family: 'Perandory';
+  src: url('/fonts/Perandory.otf') format('opentype');
+
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Perandory';
+  src: url('/fonts/Perandory-Regular.otf') format('opentype');
+
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Perandory';
+  src: url('/fonts/Perandory-Semi-Condensed.otf') format('opentype');
+
+  font-style: normal;
+}
+
+:root {
+  --font1: 'Perandory', sans-serif;
+  --font2: 'Great Vibes', sans-sefif;
+
+  --green-bg: #074034;
+  --brown1: #493020;
+  --brown2: #9c3e00;
+  --caqui: #ce8a02;
+  --grey: #d6c6b9;
+  --beige: #ffe4ce;
+  --beige2: rgb(252, 242, 233);
+
+  --orange: #f2af2c;
+}
+@keyframes neon-flicker {
+  0%,
+  19%,
+  21%,
+  23%,
+  100% {
+    text-shadow: 0 0 5px var(--orange), 0 0 10px var(--orange),
+      0 0 20px var(--orange), 0 0 40px var(--orange), 0 0 80px var(--orange);
+  }
+  20%,
+  22% {
+    text-shadow: 0 0 2px var(--orange), 0 0 4px var(--orange);
+  }
+}
+@keyframes neon-flicker2 {
+  0%,
+  19%,
+  21%,
+  23%,
+  100% {
+    text-shadow: 0 0 5px var(--beige), 0 0 10px var(--beige),
+      0 0 20px var(--beige), 0 0 40px var(--beige), 0 0 80px var(--beige);
+  }
+  20%,
+  22% {
+    text-shadow: 0 0 2px var(--beige), 0 0 4px var(--beige);
+  }
+}
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

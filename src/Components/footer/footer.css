@@ -1,0 +1,20 @@
+/* footer.css */
+.footer {
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
+  background-color: var(--green-bg);
+
+  bottom: 0;
+  left: 0;
+}
+.p-footer {
+  font-family: var(--font2);
+  font-size: 1.5em;
+  color: var(--beige);
+}
+@media (min-width: 1000px) {
+  .p-footer {
+    font-size: 1.8em;
+  }
+}

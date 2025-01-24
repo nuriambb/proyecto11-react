@@ -1,0 +1,148 @@
+@import './styles/variables.css';
+* {
+  margin: 0px;
+  padding: 3px;
+}
+
+body {
+  background-color: var(--green-bg);
+}
+.presentation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 5% 1%;
+  margin-bottom: 20px;
+}
+h1 {
+  color: var(--beige);
+  text-align: center;
+  font-family: var(--font1);
+  font-weight: 400;
+  font-size: 8rem;
+  text-shadow: 0 0 5px var(--orange), 0 0 10px var(--orange),
+    0 0 20px var(--orange), 0 0 40px var(--orange), 0 0 80px var(--orange);
+  animation: neon-flicker 2s infinite alternate;
+}
+h1:hover {
+  animation: neon-flicker 1s infinite alternate;
+}
+h3 {
+  color: var(--beige);
+  text-align: center;
+  font-family: var(--font1);
+  font-weight: 400;
+  font-size: 3rem;
+}
+p {
+  padding: 5px;
+  text-align: center;
+  font-family: var(--font2);
+  font-weight: 400;
+  font-size: 2.5rem;
+  color: var(--beige);
+}
+.someCocktails {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 1.2s ease-out forwards;
+  animation-delay: 0.2s;
+}
+.eachCocktail {
+  padding: 20px 10px 10px 10px;
+  width: 15em;
+  height: 25em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10%;
+  transition: transform 0.3s ease;
+}
+.eachCocktail:hover {
+  transform: scale(1.01);
+}
+.eachCocktail > img {
+  width: 100%;
+  height: auto;
+  border-radius: 10%;
+}
+h4 {
+  width: 100%;
+  text-align: center;
+  font-family: var(--font1);
+  color: var(--beige2);
+  font-weight: 200;
+  font-size: 2rem;
+}
+h4:hover {
+  animation: neon-flicker 1s infinite alternate;
+}
+.buttonDetail {
+  width: 100%;
+  cursor: pointer;
+  font-size: 1.5rem;
+  border: none;
+  font-family: var(--font2);
+  font-weight: 700;
+  border-radius: 20px;
+  background-color: rgba(255, 0, 0, 0);
+  color: var(--green-bg);
+  text-shadow: 0 0 5px var(--beige), 0 0 10px var(--beige),
+    0 0 20px var(--beige), 0 0 40px var(--beige), 0 0 80px var(--beige);
+  transition: letter-spacing 0.3s ease;
+}
+.buttonDetail:hover {
+  letter-spacing: 4px;
+}
+@media (max-width: 750px) {
+  h1 {
+    font-size: 6rem;
+  }
+  h3 {
+    font-size: 2.5rem;
+  }
+  p {
+    font-size: 2rem;
+  }
+  h4 {
+    font-size: 1.5rem;
+  }
+  .eachCocktail {
+    width: 12rem;
+    height: 19rem;
+  }
+  .buttonDetail {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 590px) {
+  h1 {
+    font-size: 5rem;
+  }
+  h3 {
+    font-size: 1.8rem;
+  }
+  p {
+    font-size: 2rem;
+  }
+  h4 {
+    font-size: 2rem;
+  }
+  .eachCocktail {
+    width: 15rem;
+    height: 24rem;
+  }
+  .buttonDetail {
+    font-size: 1.5rem;
+  }
+}

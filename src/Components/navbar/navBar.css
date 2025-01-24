@@ -1,0 +1,101 @@
+.navBar {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  position: relative;
+}
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--beige);
+  cursor: pointer;
+}
+.menu {
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  display: flex;
+}
+
+.menu > ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  text-decoration: none;
+  list-style: none;
+}
+
+.menu.open {
+  display: none;
+  background-color: var(--green-bg);
+  width: 100%;
+  height: 20em;
+  z-index: 3;
+}
+.menu.open ul {
+  flex-direction: column;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  font-size: 2.5rem;
+  font-family: var(--font2);
+  font-weight: 400;
+  color: var(--beige);
+}
+.menu ul li a:hover {
+  animation: neon-flicker 1s infinite alternate;
+}
+
+@media (max-width: 750px) {
+  .menu ul li a {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 0.1em;
+    right: 0.5rem;
+    z-index: 5;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    background-color: var(--primary-dark);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  .menu ul li a {
+    font-size: 2.1em;
+  }
+
+  .menu.open {
+    display: flex;
+  }
+}
+@media (min-width: 601px) {
+  .hamburger {
+    display: none; /* Ocultamos el botón de hamburguesa cuando la pantalla es grande */
+  }
+  .menu {
+    display: flex;
+  }
+}

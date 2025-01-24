@@ -1,0 +1,182 @@
+.div-general {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.h3-title {
+  font-size: 4rem;
+  text-shadow: 0 0 5px var(--orange), 0 0 10px var(--orange),
+    0 0 20px var(--orange), 0 0 40px var(--orange), 0 0 80px var(--orange);
+  animation: neon-flicker 2s infinite alternate;
+}
+.div-info {
+  gap: 10px;
+  padding: 25px;
+  flex-direction: row;
+  width: 90%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.div-info-text {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 1.2s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+.div-ingredients {
+  width: 100%;
+  height: auto;
+  padding-left: 10px;
+  background-color: var(--brown1);
+  border-radius: 20px;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+.div-ingredients:hover {
+  transform: scale(1.01);
+}
+h5 {
+  font-family: var(--font1);
+  color: var(--beige2);
+  font-size: 3em;
+  font-weight: 400;
+}
+.div-ingredients ul li {
+  font-family: var(--font1);
+  color: var(--beige2);
+  font-size: 2em;
+}
+
+.div-image {
+  width: auto;
+  height: 100%;
+}
+.div-image img {
+  width: 100%;
+  max-width: 30em;
+  height: auto;
+  border-radius: 10%;
+  opacity: 0;
+  transform: scale(0.95);
+  animation: fadeInZoom 1.2s ease-out forwards;
+  transition: transform 0.4s ease;
+}
+.div-image img:hover {
+  transform: scale(1.05);
+}
+.div-preparation {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+}
+.div-instructions {
+  background-color: var(--brown2);
+  border-radius: 20px;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+.div-instructions:hover {
+  transform: scale(1.01);
+}
+.div-instructions p {
+  color: var(--beige2);
+}
+.div-glass {
+  background-color: var(--caqui);
+  border-radius: 20px;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+.div-glass:hover {
+  transform: scale(1.01);
+}
+.div-glass p {
+  color: var(--beige2);
+}
+@keyframes fadeInZoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@media (max-width: 1000px) {
+  h5 {
+    font-size: 2.5em;
+  }
+  .div-ingredients ul li {
+    font-size: 1.5em;
+    letter-spacing: 1.5px;
+  }
+  .div-instructions p {
+    font-size: 2rem;
+  }
+  .div-glass p {
+    font-size: 2rem;
+  }
+  .h3-title {
+    font-size: 3.5rem;
+  }
+  .div-image {
+    width: 60%;
+  }
+}
+@media (max-width: 850px) {
+  h5 {
+    font-size: 2em;
+  }
+  .div-ingredients ul li {
+    font-size: 1.2em;
+  }
+  .div-instructions p {
+    font-size: 1.5rem;
+  }
+  .div-glass p {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 650px) {
+  .div-info {
+    flex-direction: column;
+  }
+  .div-info-text {
+    width: 80%;
+  }
+  .div-image {
+    width: 70%;
+  }
+  .h3-title {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 450px) {
+  .div-image {
+    width: 80%;
+  }
+  .h3-title {
+    font-size: 2.8rem;
+  }
+}
